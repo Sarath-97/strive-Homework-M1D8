@@ -1,11 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel=""
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <script>
+      /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+      const changeTitle = function (newTitle) {
+        let titleChange = document.querySelector("h1")
+        titleChange.innerText = "This is mine now"
+      };
+
+      /* EXERCISE 2
+      Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      const addClassToTitle = function () {
+        let addClass = document.querySelector("h1")
+        addClass.classList.add("myHeading")
+      };
+
+      /* EXERCISE 3
+      Write a function for changing the text of only the p which are children of a div.
+      */
+
+      const changePcontent = function () {
+        let changePinDiv = document.getElementsByTagName("div")[0].querySelector("p")
+        changePinDiv.innerText = "i changed this"
+      };
+
+      /* EXERCISE 4
+      Write a function for changing the destination of every link to https://www.google.com
+      */
+
+      const changeUrls = function () {
+        let changeLink = document.querySelector("a")
+        changeLink.innerHTML = "<This link now goes to google.com>"
+        changeLink.href = "https://www.google.com"
+      };
+
+      /* EXERCISE 5
+       Write a function for adding a new item in the second list.
+       */
+
+      const addToTheSecond = function (content) {
+        let newItemInList = document.createElement("li")
+        newItemInList.innerText = "New Item"
+      };
+
+      /* EXERCISE 6
+      Write a function for adding a second paragraph to the div.
+      */
+
+      const addParagraph = function (content) {
+        
+      };
+
+      /* EXERCISE 7
+      Write a function for making the first UL disappear.
+      */
+
+      const firstUlDisappear = function () {
+        let disappear = document.getElementsByTagName("ul")[0].remove()
+        
+      };
+
+      /* EXERCISE 8
+      Write a function for making the background of every UL green.
+      */
+
+      const paintItGreen = function () {
+        let ulColor = document.querySelectorAll("ul")
+        ulColor.style.colof
+      };
+
+      /* EXERCISE 9
+      Make the heading of the page change color every time the user clicks on it.
+      */
+
+      const makeItClickable = function () {
+        let myColors = ["red"]
+      };
+
+      /* EXERCISE 10
+      Change the footer text with something else when the user clicks on it.
+      */
+
+      const changeFooterText = function () {
+        let footerChange = document.querySelector("footer p")
+        footerChange.addEventListner("click",)
+      };
+
+      /* EXERCISE 11
+      Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+      const inputField = document.getElementById("input-field");
+      // ...
+
+      /* EXERCISE 12
+      Create a new welcome alert message when the page successfully loads.
+      */
+
+      window.onload = function () {
+        //
+      };
+
+      /* EXERCISE 13
+      Use HTML5 tags to divide the content of the page in a more semantic way.
+      */
+
+
+      // document.getElementById("secondList").appendChild(addToTheSecond())
+
+    </script>
+
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a href="strive.school">This link goes to Strive School</a>
+
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+        />
+      </div>
+    </main>
+
+    <input type="button" value="Change the title" onclick="changeTitle()">
+      <input type="button" value="add class to header" onclick="addClassToTitle()">
+      <input type="button" value="Chane p in div" onclick="changePcontent()">
+      <input type="button" value="Change link" onclick="changeUrls()">
+      <input type="button" value="add item to second list" onclick="addToTheSecond()">
+      <input type="button" value="delete first list" onclick="firstUlDisappear()">
+
+    <footer>
+      <p>And this text is just for the exercise too!</p>
+    </footer>
+  </body>
 </html>
